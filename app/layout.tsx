@@ -1,3 +1,4 @@
+import PageHeader from "@/components/PageHeader"
 import "@/styles/globals.css"
 import type { Metadata } from "next"
 import { Inter, Roboto_Mono } from "next/font/google"
@@ -26,7 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${roboto_mono.variable}`}>
-      <body className="bg-gray-400 font-mono">{children}</body>
+      <body className="bg-gray-400 font-mono">
+        <PageHeader />
+        {children}
+      </body>
     </html>
   )
 }

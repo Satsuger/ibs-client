@@ -10,12 +10,16 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "15px",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
+      colors: {
+        red: "#af0e2e",
+        darkRed: "#640215",
+      },
       fontFamily: {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-roboto-mono)"],
