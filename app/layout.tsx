@@ -1,3 +1,4 @@
+import PageFooter from "@/components/PageFooter"
 import PageHeader from "@/components/PageHeader"
 import "@/styles/globals.css"
 import type { Metadata } from "next"
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className="bg-gray-400 font-mono">
         <PageHeader />
         {children}
+        <PageFooter />
       </body>
     </html>
   )

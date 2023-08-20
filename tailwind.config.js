@@ -17,8 +17,11 @@ module.exports = {
     },
     extend: {
       colors: {
+        black: "#000",
+        white: "#fff",
         red: "#af0e2e",
         darkRed: "#640215",
+        borderGray: "#1d1b1c",
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
