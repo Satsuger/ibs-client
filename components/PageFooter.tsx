@@ -181,7 +181,7 @@ export default function PageFooter() {
                 className="col-span-2 flex flex-col min-[350px]:col-span-1"
                 key={i}
               >
-                <h3 className="mb-[20px] text-[24px] text-white">
+                <h3 className="mb-[20px] text-[24px] text-white md:mb-[40px]">
                   {block.title}
                 </h3>
                 {block.links.map((link, i) => {
@@ -189,7 +189,7 @@ export default function PageFooter() {
                     <Link
                       href={link.href}
                       key={i}
-                      className="relative mb-[10px] w-max text-[18px] leading-[1.7] text-white opacity-[0.8] transition-opacity duration-300 before:absolute before:bottom-[0px] before:left-[50%] before:h-[1px] before:w-[0%] before:translate-x-[-50%] before:bg-white before:transition-all before:duration-300 hover:opacity-[1] hover:before:w-[100%] active:opacity-[0.9] active:before:w-[95%]"
+                      className="relative mb-[10px] w-max text-[18px] leading-[1.7] text-white opacity-[0.8] transition-opacity duration-300 before:absolute before:bottom-[0px] before:left-[50%] before:h-[1px] before:w-[0%] before:translate-x-[-50%] before:bg-white before:transition-all before:duration-300 hover:opacity-[1] hover:before:w-[100%] active:opacity-[0.9] active:before:w-[95%] md:mb-[18px]"
                     >
                       {link.text}
                     </Link>
