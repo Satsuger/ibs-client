@@ -237,12 +237,14 @@ export default function PageFooter() {
           <div className="flex flex-[1] items-center justify-end gap-[12px]">
             {socialMedia.map((el, i) => {
               return (
-                <div
+                <Link
+                  href={el.link}
+                  title={el.title}
                   className="relative flex cursor-pointer select-none items-center justify-center rounded-full border-[1px] border-white p-[15px] text-white transition-all duration-300 before:absolute before:left-[50%] before:top-[50%] before:z-[2] before:h-[0px] before:w-[0px] before:translate-x-[-50%] before:translate-y-[-50%] before:rounded-full before:bg-white before:transition-all before:duration-300 hover:text-black hover:before:h-[44px] hover:before:w-[44px] active:before:h-[42px] active:before:w-[42px] active:before:opacity-[0.9]"
                   key={i}
                 >
                   {el.Icon("w-[18px] h-[18px] relative z-[2]")}
-                </div>
+                </Link>
               )
             })}
           </div>
