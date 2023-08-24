@@ -1,3 +1,4 @@
+import About from "@/components/About"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -25,6 +26,8 @@ export default function Home() {
           </DialogHeader>
         </DialogContent>
       </Dialog>
+
+      <About />
     </main>
   )
 }
