@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.welcom {
-  /* mask: url("WelcomeSection.svg");
-    mask-clip: padding-box;
-    mask-size: cover; */
-  clip-path: url("WelcomeSection.svg#clip0_505_143");
-}
+/* .welcom {
+  clip-path: url("#welcom-shape");
+} */

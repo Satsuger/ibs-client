@@ -1,4 +1,4 @@
-import { Basketball, Facebook, Instagram, Linkedin, Logo } from "@/public/icons"
+import { Basketball, Facebook, Instagram, Linkedin, Logo } from "@/lib/icons"
 import Link from "next/link"
 import { ReactNode } from "react"
 

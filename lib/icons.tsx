@@ -109,3 +109,18 @@ export function Basketball({ className }: { className?: string }) {
     </svg>
   )
 }
+
+export function Ramp({ className }: { className?: string }) {
+  return (
+    <svg
+      width="32"
+      height="33"
+      viewBox="0 0 32 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path d="M32 33C32 22 25.5 2 0 0H32V33Z" fill="current-color" />
+    </svg>
+  )
+}
