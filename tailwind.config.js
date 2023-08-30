@@ -22,6 +22,7 @@ module.exports = {
         red: "#af0e2e",
         darkRed: "#640215",
         borderGray: "#1d1b1c",
+        green: "#062E1D",
       },
       fontFamily: {
         sans: ["var(--font-inter)"],

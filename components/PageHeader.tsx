@@ -1,7 +1,3 @@
-import { Logo, Ramp } from "@/lib/icons"
-import { Menu, User } from "lucide-react"
-import Link from "next/link"
-
 import {
   Sheet,
   SheetContent,
@@ -10,42 +6,42 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import heroSectionImg from "@/public/heroSection.webp"
+import { Ramp } from "@/lib/icons"
+import heroSectionImg from "@/public/heroSection.png"
+import LogoImg from "@/public/logo.png"
+import { Menu, User } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 const navLinks = [
   {
-    text: "NEWS",
+    text: "Навчання",
     path: "#",
   },
   {
-    text: "EVENTS",
+    text: "Галерея",
     path: "#",
   },
   {
-    text: "ACADEMICS",
+    text: "Контакти",
     path: "#",
   },
   {
-    text: "RESEARCH",
-    path: "#",
-  },
-  {
-    text: "ADMISSION",
-    path: "#",
-  },
-  {
-    text: "ABOUT",
+    text: "Про Семінарію",
     path: "#",
   },
 ]
 
 export default function PageHeader() {
   return (
-    <div className="bg-red pb-[120px] pt-5">
+    <div className="bg-green pb-[120px] pt-5">
       <div className="container relative">
         <header className="left-0 right-0 z-10 mb-[100px] flex items-stretch justify-between md:container md:absolute md:mb-0">
-          <Logo className="mr-2 max-w-[140px] lg:max-w-[293px]" />
+          <Image
+            src={LogoImg}
+            alt="logo"
+            className="mr-2 max-w-[140px] object-cover sm:max-w-[223px] lg:max-w-[293px]"
+          />
 
           <Sheet>
             <SheetTrigger>
@@ -64,12 +60,12 @@ export default function PageHeader() {
             </SheetContent>
           </Sheet>
 
-          <nav className="relative hidden w-full items-center justify-end gap-4 rounded-bl-[30px] bg-red md:flex">
-            <Ramp className="absolute left-[-31px] top-0 fill-red" />
+          <nav className="relative hidden w-full items-center justify-end gap-4 rounded-bl-[30px] bg-green md:flex">
+            <Ramp className="absolute left-[-31px] top-0 fill-green" />
 
             {navLinks.map((nLink, i) => (
               <Link
-                className="text-sm text-white transition-all hover:text-black lg:text-base"
+                className="text-sm text-white transition-all hover:text-blue-300 lg:text-base"
                 key={i}
                 href={nLink.path}
               >
@@ -77,10 +73,10 @@ export default function PageHeader() {
               </Link>
             ))}
 
-            <div className="rounded-full bg-white p-2 transition-all hover:bg-green-800 lg:p-3">
+            <div className="cursor-pointer rounded-full bg-white p-2 transition-all hover:bg-blue-300 lg:p-3">
               <User className="h-[15px] w-[15px] lg:h-[20px] lg:w-[20px] xl:h-[24px] xl:w-[24px]" />
             </div>
-            <Ramp className="absolute bottom-[-32px] right-0 fill-red" />
+            <Ramp className="absolute bottom-[-32px] right-0 fill-green" />
           </nav>
         </header>
 
@@ -96,17 +92,16 @@ export default function PageHeader() {
           alt="hero section"
         />
 
-        <div className="bottom-[-1px] bg-red py-2 text-white md:absolute md:max-w-[366px] md:rounded-tr-[30px] lg:max-w-[553px]">
-          <Ramp className="absolute left-0 top-[-33px] rotate-180 fill-red" />
+        <div className="bottom-[-1px] bg-green py-3 text-white md:absolute md:max-w-[366px] md:rounded-tr-[30px] lg:max-w-[553px]">
+          <Ramp className="absolute left-0 top-[-33px] rotate-180 fill-green" />
 
           <h1 className="mb-4 text-5xl sm:text-[68px] md:text-[40px] lg:text-7xl">
-            AMERICAN UNIVERSITY
+            ІРПІНСЬКА БІБЛІЙНА СЕМІНАРІЯ
           </h1>
           <p className="pr-1 leading-8 md:text-sm lg:text-lg">
-            BROOKSIDE UNIVERSITY IS A LEADING RESEARCH UNIVERSITY PUSHING
-            BOUNDARIES AND FRONTIERS EVER SINCE ITS INCEPTION
+            РО «ВИЩИЙ ДУХОВНИЙ НАВЧАЛЬНИЙ ЗАКЛАД»
           </p>
-          <Ramp className="absolute bottom-0 right-[-32px] rotate-180 fill-red" />
+          <Ramp className="absolute bottom-0 right-[-32px] hidden rotate-180 fill-green md:block" />
         </div>
       </div>
     </div>

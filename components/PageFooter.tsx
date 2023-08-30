@@ -1,4 +1,4 @@
-import { Basketball, Facebook, Instagram, Linkedin, Logo } from "@/lib/icons"
+import { Basketball, Facebook, Instagram, Linkedin } from "@/lib/icons"
 import Link from "next/link"
 import { ReactNode } from "react"
 
@@ -218,7 +218,11 @@ export default function PageFooter() {
 
         <div className="flex flex-col items-center justify-between gap-[24px] border-t-[1px] border-t-borderGray py-[32px] xl:flex-row xl:gap-0">
           <div className="flex-[1]">
-            <Logo className="h-[44px] w-[156px]" />
+            {/* 
+
+            sorry but we don't have any more logo in svg, only png ;(
+
+            <Logo className="h-[44px] w-[156px]" />   */}
           </div>
 
           <div className="flex w-max flex-col items-center justify-between md:flex-row">
