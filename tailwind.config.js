@@ -24,8 +24,9 @@ module.exports = {
         borderGray: "#1d1b1c",
       },
       fontFamily: {
-        sans: ["var(--font-inter)"],
-        mono: ["var(--font-roboto-mono)"],
+        comfortaa: ["var(--font-comfortaa)"],
+        cormorant_garamond: ["var(--font-cormorant-garamond)"],
+        helvetica_neue: ["var(--font-helvetica-neue)"],
       },
       keyframes: {
         "accordion-down": {

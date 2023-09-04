@@ -1,19 +1,39 @@
 import PageFooter from "@/components/PageFooter"
 import PageHeader from "@/components/PageHeader"
 import "@/styles/globals.css"
-import type { Metadata } from "next"
-import { Inter, Roboto_Mono } from "next/font/google"
+import localFont from "next/font/local"
 
-const inter = Inter({
-  subsets: ["latin"],
+import type { Metadata } from "next"
+import { Comfortaa, Cormorant_Garamond } from "next/font/google"
+
+const helveticaneue = localFont({
+  src: [
+    {
+      path: "../lib/fonts/HelveticaNeue/HelveticaNeueMedium.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../lib/fonts/HelveticaNeue/HelveticaNeueRegular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-helvetica-neue",
 })
 
-const roboto_mono = Roboto_Mono({
+const cormorant_garamond = Cormorant_Garamond({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-roboto-mono",
+  weight: "400",
+  variable: "--font-cormorant-garamond",
+})
+
+const comfortaa = Comfortaa({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-comfortaa",
 })
 
 export const metadata: Metadata = {
@@ -27,8 +47,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto_mono.variable}`}>
-      <body className="bg-gray-400 font-mono">
+    <html
+      lang="en"
+      className={`${comfortaa.variable} ${cormorant_garamond.variable} ${helveticaneue.variable}`}
+    >
+      <body className="bg-gray-400 font-comfortaa">
         <PageHeader />
         {children}
         <PageFooter />
